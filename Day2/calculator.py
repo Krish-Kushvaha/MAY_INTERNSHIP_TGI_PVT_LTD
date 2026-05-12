@@ -1,41 +1,34 @@
-# SIMPLE CALCULATOR APPLICATION
+print("==== Simple Calculator ====")
 
-print("===== SIMPLE CALCULATOR =====")
+first = int(input("Enter first number: "))
+second = int(input("Enter second number: "))
 
-# Taking input from user
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-
-# Choosing operation
 print("\nChoose Operation")
-print("1. Addition (+)")
-print("2. Subtraction (-)")
-print("3. Multiplication (*)")
-print("4. Division (/)")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
 
 choice = input("Enter choice (1/2/3/4): ")
 
-# Conditions
-if choice == '1':
-    result = num1 + num2
-    print("Result =", result)
+if choice == "1":
+    answer = first + second
+    print("Addition =", answer)
 
-elif choice == '2':
-    result = num1 - num2
-    print("Result =", result)
+elif choice == "2":
+    answer = first - second
+    print("Subtraction =", answer)
 
-elif choice == '3':
-    result = num1 * num2
-    print("Result =", result)
+elif choice == "3":
+    answer = first * second
+    print("Multiplication =", answer)
 
-elif choice == '4':
-    if num2 != 0:
-        result = num1 / num2
-        print("Result =", result)
+elif choice == "4":
+    if second != 0:
+        answer = first / second
+        print("Division =", answer)
     else:
-        print("Error: Division by zero is not allowed")
+        print("Cannot divide by zero")
 
 else:
     print("Invalid Choice")
-
-print("\nCalculator Program Finished!")
